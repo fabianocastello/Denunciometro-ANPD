@@ -18,7 +18,6 @@ from random import randrange
 def run():
     global inicio, final, ped
     
-    
     # https://www.markdownguide.org/basic-syntax/
     with st.beta_expander('Leia-Me!', expanded=False):
         st.write('✅ Denunciómetro foi criado para publicar dados referentes à denúncias feitas a Agência Nacional de Proteção de Dados (ANPD), no contexto da Lei Geral de Proteção de dados (LGPD). **O conteúdo das denúncias não é disponibilizado**.')
@@ -27,7 +26,6 @@ def run():
         
     ################################## Opções
     st.sidebar.write('Opções de seleção. Para reset geral pressione F5.')
-
 
     from datetime import time
     from datetime import date
