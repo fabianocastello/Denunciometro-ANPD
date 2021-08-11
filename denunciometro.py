@@ -400,7 +400,7 @@ def update():
                 recl['Periodo']     = recl['Periodo_tmp'].apply(lambda x: str(x.year)+'-'+str(x.month).zfill(2))
                 recl.drop('Periodo_tmp', axis=1, inplace=True)
 
-                geo= pd.read_pickle('../ANDP.Denunciometro/Geo.pkl')
+                geo= pd.read_pickle('./Geo.pkl')
                 def ajuste_cidade(x):
                     x = unidecode(str(x).lower().strip())
                     exc = '`- '
@@ -414,12 +414,10 @@ def update():
                 ped['Cidade'] = ped['Cidade'].fillna('ND')
                 ped['lat']    = ped['lat'].fillna(-34.017678)
                 ped['lon']    = ped['lon'].fillna(-41.617380)
-                with open('../ANDP.Denunciometro/00LastUpdate.txt', 'w', encoding='utf-8') as base:
+                with open('./00LastUpdate.txt', 'w', encoding='utf-8') as base:
                     base.write(f"""{running_date}\n{inicio}\n{final}""")
-                ped.to_pickle('../ANDP.Denunciometro/00Ped.pkl')
-                recl.to_pickle('../ANDP.Denunciometro/00Recl.pkl')
-                ped.to_csv('00Ped.csv', index=False)
-                recl.to_csv('00Recl.csv', index=False)
+                ped.to_pickle('.00Ped.pkl')
+                recl.to_pickle('.00Recl.pkl')
             ############################################## END OF UPDATE
         return(True)
     except Exception as e:
