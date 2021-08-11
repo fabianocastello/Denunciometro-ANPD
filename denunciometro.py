@@ -456,7 +456,7 @@ st.markdown(
     
 st.markdown(f'''<body>
 <p style="font-size:30px;line-height: 25px"><b><br>Denunciómetro LGPD</b><br><span style="font-size: 12pt;"><i>denuncias realizadas junto à ANPD no contexto da LGPD</i></span>
-<span style="font-size: 8pt;"><br><i>atualizado até {last}</i></span>
+<span style="font-size: 8pt;"><br><i>atualizado até {last} (UTC)</i></span>
     </p></body>''', unsafe_allow_html=True)
 run()
 
