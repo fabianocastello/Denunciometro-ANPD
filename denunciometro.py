@@ -422,7 +422,8 @@ def update():
                 recl.to_csv('00Recl.csv', index=False)
             ############################################## END OF UPDATE
         return(True)
-    except:
+    except Exception as e:
+        registro(str(e))
         return(False)
         
 last_update = (datetime.today() - datetime.strptime(last, '%d-%m-%Y %Hh%Mm')).days
