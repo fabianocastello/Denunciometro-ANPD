@@ -148,7 +148,7 @@ def registro(remarks=None):
     
 import streamlit as st 
 try: st.set_page_config(
-        page_title="Validação de Hashs de Laudos",
+        page_title="DPO3 - Denunciómetro LGPD",
         initial_sidebar_state="collapsed")
 except: pass
 from streamlit import caching
