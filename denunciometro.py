@@ -17,6 +17,7 @@ from random import randrange
     
 def run():
     global inicio, final, ped
+    registro()
     
     # https://www.markdownguide.org/basic-syntax/
     with st.beta_expander('Leia-Me!', expanded=False):
