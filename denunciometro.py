@@ -130,6 +130,7 @@ def run():
         show.rename({'s_Genero': 'Gênero',
                      's_Idade' : 'Idade',
                      'UF_loc'  : 'UF'}, axis=1,inplace=True)
+        show['Idade'] = show['Idade'].astype(str)
         st.dataframe(show.fillna('ND'))
         
 
